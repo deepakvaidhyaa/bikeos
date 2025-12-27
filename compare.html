@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Compare Bikes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="https://www.shutterstock.com/image-vector/vector-illustration-futuristic-motocross-helmet-600w-2585243799.jpg" alt="logo" class="logo">
+      <span class="site-name">Bike<span  style="font-size:26px ;font-weight:bold; color: red  ;">OS</span></span>
+    </div>
+    
+    <div class="nav-right">
+  <input type="text" id="navSearch" placeholder="Search bikes..." />
+
+  <input type="number" id="minPrice" placeholder="Min ₹" />
+  <input type="number" id="maxPrice" placeholder="Max ₹" />
+
+  <button id="navSubmit" class="search-btn">Search</button>
+</div>
+
+
+  </nav>
+  <div class="wrapper">
+    <h1>Compare Bikes</h1>
+    <div id="compareTable"></div>
+  </div>
+
+  <script src="compare.js"></script>
+  <script src="bikes.js"></script>
+  <script src="navbar.js"></script>
+  <script src="specs.js"></script>
+
+
+
+</body>
+</html>

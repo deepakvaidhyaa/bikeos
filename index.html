@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bike Recommender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="https://www.shutterstock.com/image-vector/vector-illustration-futuristic-motocross-helmet-600w-2585243799.jpg" alt="logo" class="logo">
+      <span class="site-name">Bike<span  style="font-size:26px ;font-weight:bold; color: red  ;">OS</span></span>
+    </div>
+    
+    <div class="nav-right">
+  <input type="text" id="navSearch" placeholder="Search bikes..." />
+
+  <input type="number" id="minPrice" placeholder="Min ₹" />
+  <input type="number" id="maxPrice" placeholder="Max ₹" />
+
+  <button id="navSubmit" class="search-btn">Search</button>
+</div>
+
+
+  </nav>
+
+  <!-- HERO SECTION -->
+   
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find Your Bike</h1>
+      <h4>Get Comprehensive Information on Bikes!</h4>
+      <input type="text" id="heroSearch" placeholder="Search your bike here..." />
+      <button id="heroSubmit" class="search-btn hero-btn">Find Bike</button>
+    </div>
+    
+   
+  </section>
+
+  <!-- FEATURED BIKES -->
+  <section class="featured">
+    <h2>Featured Bikes</h2>
+    <div class="tabs">
+      <button class="tab active" data-type="trending">Trending</button>
+      <button class="tab" data-type="popular">Popular</button>
+      <button class="tab" data-type="upcoming">Upcoming</button>
+    </div>
+<div class="slider-wrapper">
+  <div id="featuredContainer" class="bike-slider"></div>
+</div>
+
+  </section>
+
+  <!-- RECOMMENDED / SEARCH RESULT -->
+  <section class="results">
+    <h2>Recommended Bikes</h2>
+    <div id="resultContainer" class="bike-grid"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 BikeFinder. All rights reserved.</p>
+  </footer>
+
+  <script src="bikes.js"></script>
+  <script src="script.js"></script>
+<script src="specs.js"></script>
+
+<script src="navbar.js"></script>
+
+</body>
+</html>

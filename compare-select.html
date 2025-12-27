@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Bikes to Compare</title>
+
+  <!-- ✅ EXTERNAL CSS ONLY -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="https://www.shutterstock.com/image-vector/vector-illustration-futuristic-motocross-helmet-600w-2585243799.jpg" alt="logo" class="logo">
+      <span class="site-name">Bike<span  style="font-size:26px ;font-weight:bold; color: red  ;">OS</span></span>
+    </div>
+    
+    <div class="nav-right">
+  <input type="text" id="navSearch" placeholder="Search bikes..." />
+
+  <input type="number" id="minPrice" placeholder="Min ₹" />
+  <input type="number" id="maxPrice" placeholder="Max ₹" />
+
+  <button id="navSubmit" class="search-btn">Search</button>
+</div>
+
+
+  </nav>
+<div class="compare-page">
+  <div class="compare-card">
+
+    <h1>Select Bikes to Compare</h1>
+
+    <h2>Select number of bikes</h2>
+    <select id="bikeCount">
+      <option value="2">2 Bikes</option>
+      <option value="3">3 Bikes</option>
+      <option value="4">4 Bikes</option>
+      <option value="5">5 Bikes</option>
+      <option value="6">6 Bikes</option>
+    </select>
+
+    <h2>Select bikes</h2>
+    <input 
+  type="text" 
+  class="search-bike-input"
+  placeholder="Search bike by name..."
+/>
+<div class="search-results" id="searchResults"></div>
+
+    <div id="bikeOptions"></div>
+
+    <h2>Selected Bikes</h2>
+    <ul id="selectedList"></ul>
+
+    <button id="goCompare">Compare</button>
+
+  </div>
+</div>
+<script src="bikes.js"></script>
+<script src="compare-select.js"></script>
+<script src="specs.js"></script>
+
+<script src="navbar.js"></script>
+
+</html>

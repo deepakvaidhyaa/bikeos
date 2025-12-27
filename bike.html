@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bike Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bike-page">
+
+<!-- NAVBAR -->
+<nav class="navbar bike-navbar">
+  <div class="bike-navbar-inner">
+    <div class="nav-left">
+      <img src="https://www.shutterstock.com/image-vector/vector-illustration-futuristic-motocross-helmet-600w-2585243799.jpg" class="logo">
+      <span class="site-name">Bike<span style="color:red">OS</span></span>
+    </div>
+
+    <div class="nav-right">
+      <input type="text" id="navSearch" placeholder="Search bikes..." />
+      <input type="number" id="minPrice" placeholder="Min ₹" />
+      <input type="number" id="maxPrice" placeholder="Max ₹" />
+      <button id="navSubmit" class="search-btn">Search</button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE -->
+<div class="bike-page-wrapper">
+
+  <!-- BREADCRUMB -->
+  <div class="bike-breadcrumb">
+    Home › Bikes › <span id="crumbName"></span>
+  </div>
+
+  <!-- HEADER -->
+  <section class="bike-header">
+    <h1 id="bikeName"></h1>
+    <p class="rating" style="color:yellow">★★★★☆ <span>3.9 (3,200 Ratings)</span></p>
+    <p class="trust-line">✔ 3,200+ verified user reviews</p>
+  </section>
+
+  <!-- MAIN GRID -->
+  <section class="bike-main">
+
+    <!-- GALLERY -->
+    <div class="bike-gallery">
+      <button class="img-nav prev" id="prevImg">❮</button>
+      <img id="bikeImg" alt="Bike Image">
+      <button class="img-nav next" id="nextImg">❯</button>
+    </div>
+
+    <!-- BUY CARD -->
+    <div class="bike-buy-card">
+      <p class="price" id="bikePrice"></p>
+      <p class="sub">Avg. Ex-Showroom price</p>
+
+      <!-- BASIC CHIPS -->
+      <div class="spec-chips" id="basicChips"></div>
+
+      <button class="primary-btn" id="checkOnRoad">Check on-road price</button>
+      <button class="secondary-btn" id="compareBtn">Compare Bikes</button>
+    </div>
+
+  </section>
+
+  <!-- TABS -->
+  <div class="bike-tabs">
+    <button class="bike-tab active">Overview</button>
+    <button class="bike-tab">Specs</button>
+    <button class="bike-tab">Mileage</button>
+    <button class="bike-tab">Colours</button>
+  </div>
+
+  <!-- FULL SPECS -->
+  <section class="bike-details"><div class="specs-wrapper">
+  <div class="spec-chips" id="specChips"></div>
+</div>
+    
+  </section>
+
+</div>
+
+<!-- ON ROAD PRICE MODAL -->
+<div class="modal-overlay" id="priceModal">
+  <div class="price-modal">
+    <h2>On-Road Price</h2>
+
+    <label>Select City</label>
+    <select id="citySelect">
+      <option value="default">Select city</option>
+      <option value="chennai">Chennai</option>
+      <option value="coimbatore">Coimbatore</option>
+      <option value="madurai">Madurai</option>
+      <option value="salem">Salem</option>
+      <option value="trichy">Trichy</option>
+    </select>
+
+    <div class="price-breakup" id="priceBreakup"></div>
+
+    <button class="primary-btn" id="closeModal">Close</button>
+  </div>
+</div>
+
+<!-- SCRIPTS (LOAD ONCE, ORDER MATTERS) -->
+<script src="bikes.js"></script>
+<script src="specs.js"></script>
+<script src="bike.js"></script>
+<script src="navbar.js"></script>
+
+</body>
+</html>
